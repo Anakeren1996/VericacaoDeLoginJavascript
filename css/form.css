@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section.my-form {
+  background: #C295D8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section.my-form .content {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+section.my-form h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+section.my-form .content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+section.my-form .span-required {
+  font-size: 12px;
+  margin: 3px 0 0 1px;
+  color: #e63636;
+  display: none;
+}
+
+section.my-form input {
+  padding: 8px 5px;
+  outline: none;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 2px solid #181818;
+  color: #181818;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+section.my-form .inputs:focus {
+  border-color: gray;
+}
+
+section.my-form .inputs::placeholder {
+  color: #181818;
+}
+
+section.my-form button[type=submit] {
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  background: #C295D8;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+section.my-form button[type=submit]:hover {
+  background: purple;
+}
+
+section.my-form .successMessage {
+  display: none;
+  color: #fff;
+  background: green;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+section.my-form .errorMessage {
+  display: none;
+  color: #fff;
+  background: red;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+
+.body-welcome {
+  background: purple;
+}
+
+.divWelcome h1 {
+  text-align: center;
+  margin-top: 40px;
+  color: #F1C6D3;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  section.my-form .content {
+    margin: 2vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  section.my-form {
+    height: 120vh;
+  }
+}
