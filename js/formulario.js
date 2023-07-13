@@ -105,13 +105,24 @@ if (form) {
   }
 
   // TELA DE LOGIN
-  const emailLoginInput = document.getElementById("emailLogin");
+  let emailLoginInput = document.getElementById("emailLogin");
+  let passwordLoginInput = document.getElementById("passwordLogin");
 
-  emailLoginInput.addEventListener("click", function () {
-    const errorMessageLogin = document.querySelector(".js-errorMessage");
-    errorMessageLogin.innerHTML = "";
-    errorMessageLogin.style.display = "none"; 
-  });
+  if (emailLoginInput) {
+    emailLoginInput.addEventListener("click", function () {
+      let errorMessageLogin = document.querySelector(".js-errorMessage");
+      errorMessageLogin.innerHTML = "";
+      errorMessageLogin.style.display = "none";
+    });
+  }
+
+  if (passwordLoginInput) {
+    passwordLogin.addEventListener("click", function () {
+      errorMessageLogin = document.querySelector(".js-errorMessage");
+      errorMessageLogin.innerHTML = "";
+      errorMessageLogin.style.display = "none";
+    });
+  }
 
   function validateLogin() {
     let emailLogin = document.getElementById("emailLogin").value;
@@ -124,7 +135,6 @@ if (form) {
       emailLogin === cadastroData.email &&
       passwordLogin === cadastroData.password
     ) {
-     
       window.location.href = "/paginaLogin.html";
     } else {
       setTimeout(function () {
